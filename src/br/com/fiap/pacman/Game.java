@@ -18,13 +18,13 @@ public class Game extends JFrame implements KeyListener {
 	private Ghost ghost3 = new Ghost(0,500,0);
 	private Ghost ghost4 = new Ghost(500,500,0);
 	private Bomb bomb = new Bomb(100,100);
-	private Booster booster = new Booster(400, 400);
+	private Booster booster = new Booster(400, 400, 10);
 
 	private JLabel imgPlayer = new JLabel(new ImageIcon("src/images/pacman.png"));
-	private JLabel imgGhost1 = new JLabel(new ImageIcon("src/images/ghost.png"));
-	private JLabel imgGhost2 = new JLabel(new ImageIcon("src/images/ghost.png"));
-	private JLabel imgGhost3 = new JLabel(new ImageIcon("src/images/ghost.png"));
-	private JLabel imgGhost4 = new JLabel(new ImageIcon("src/images/ghost.png"));
+	private JLabel imgGhost1 = new JLabel(new ImageIcon("src/images/ghost_1.png"));
+	private JLabel imgGhost2 = new JLabel(new ImageIcon("src/images/ghost_2.png"));
+	private JLabel imgGhost3 = new JLabel(new ImageIcon("src/images/ghost_3.png"));
+	private JLabel imgGhost4 = new JLabel(new ImageIcon("src/images/ghost_4.png"));
 	private JLabel imgBomb = new JLabel(new ImageIcon("src/images/bomb.png"));
 	private JLabel imgBooster = new JLabel(new ImageIcon("src/images/booster.png"));
 
@@ -56,6 +56,7 @@ public class Game extends JFrame implements KeyListener {
 		render();
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setSize(SCREENSIZE + 100, SCREENSIZE + 100);
+		getContentPane().setBackground(new java.awt.Color(5, 5, 5));
 		setVisible(true);
 		addKeyListener(this);
 
@@ -86,8 +87,7 @@ public class Game extends JFrame implements KeyListener {
 
 	private void run() {
 		while (player.getLife() > 0) {
-			
-			//coloque aqui os métodos de movimentação e colisão 
+			//TODO: coloque aqui os métodos de movimentação e colisão 
 			
 			try {
 				Thread.sleep(speed);
